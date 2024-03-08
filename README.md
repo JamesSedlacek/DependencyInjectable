@@ -74,8 +74,8 @@ let package = Package(
 To set up dependency injection for your project, follow these steps:
 
 1. Define a protocol and implementation for your dependencies.
-2. Create dependency keys conforming to the `DependencyKey` protocol for each dependency.
-3. Extend `DependencyValues` to include your dependencies for easy access throughout your application.
+2. For each of your dependencies, create a dependency key that conforms to the `DependencyKey` protocol.
+3. Extend `DependencyValues` to include your dependencies for easy key path access throughout your application.
 
 ## Usage
 
@@ -148,6 +148,7 @@ struct ExampleApp: App {
 ### Injecting dependencies into a ViewModel
 
 Create a view model that injects your service using the `@Observable` macro and the `DependencyInjectable` protocol:
+Note - `onInject(dependencies:)` gets called automatically by the `.inject(:)` view modifier.
 
 ```swift
 @Observable
