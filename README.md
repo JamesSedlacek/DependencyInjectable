@@ -73,7 +73,7 @@ let package = Package(
 
 To set up dependency injection for your project, follow these steps:
 
-1. Define your services or dependencies conforming to the `DependencyInjectable` protocol.
+1. Define a protocol and implementation for your dependencies.
 2. Create dependency keys conforming to the `DependencyKey` protocol for each dependency.
 3. Extend `DependencyValues` to include your dependencies for easy access throughout your application.
 
