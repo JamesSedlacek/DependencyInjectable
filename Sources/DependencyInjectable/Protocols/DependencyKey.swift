@@ -21,7 +21,6 @@ import Foundation
 ///
 /// ```
 /// struct MyDependencyKey: DependencyKey {
-///     typealias Value = MyDependencyType
 ///     static let defaultValue: MyDependencyType = MyDependency()
 /// }
 /// ```

@@ -17,7 +17,7 @@ import SwiftUI
 /// Usage:
 /// ```
 /// struct ContentView: View {
-///     @EnvironmentObject var viewModel: ViewModel // Conforms to DependencyInjectable & AnyObservable
+///     @State var viewModel: ViewModel = .init() // Conforms to DependencyInjectable & AnyObservable
 ///
 ///     var body: some View {
 ///         Text("Hello, SwiftUI!")

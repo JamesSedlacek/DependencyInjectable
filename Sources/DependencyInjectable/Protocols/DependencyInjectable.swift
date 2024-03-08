@@ -19,6 +19,7 @@ import Foundation
 /// the object with dependencies retrieved from the provided `DependencyValues`.
 ///
 /// ```
+/// @Observable
 /// class MyService: DependencyInjectable {
 ///     var anotherService: AnotherServiceType?
 ///

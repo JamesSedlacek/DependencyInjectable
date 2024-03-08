@@ -17,7 +17,7 @@ import SwiftUI
 /// Usage:
 /// ```
 /// struct ContentView: View {
-///     @ObservedObject var viewModel: ViewModel
+///     @State var viewModel: ViewModel = .init()
 ///
 ///     var body: some View {
 ///         Text("Hello, World!")
