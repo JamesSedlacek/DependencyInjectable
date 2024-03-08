@@ -10,7 +10,8 @@ This approach simplifies testing and development by decoupling your app's compon
 3. [Installation](#installation)
 4. [Setup](#setup)
 5. [Usage](#usage)
-6. [Author](#author)
+6. [Examples](https://github.com/JamesSedlacek/DependencyInjectable/blob/main/Examples/Examples.swift)
+7. [Author](#author)
 
 ## Features
 
