@@ -50,7 +50,7 @@ https://github.com/JamesSedlacek/DependencyInjectable.git
 
 #### Package.swift
 
-If you are developing a Swift package or have a project that already uses `Package.swift`, you can add YourPackageName as a dependency:
+If you are developing a Swift package or have a project that already uses `Package.swift`, you can add `DependencyInjectable` as a dependency:
 
 ```swift
 // swift-tools-version:5.10
