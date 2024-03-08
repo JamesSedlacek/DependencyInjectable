@@ -37,7 +37,7 @@ This approach simplifies testing and development by decoupling your app's compon
 
 #### Xcode
 
-To integrate DependencyInjectable into your Xcode project using Xcode 15 or later, follow these steps:
+To integrate `DependencyInjectable` into your Xcode project using Xcode 15 or later, follow these steps:
 
 1. Open your project in Xcode.
 2. Select `File` > `Swift Packages` > `Add Package Dependency...`
