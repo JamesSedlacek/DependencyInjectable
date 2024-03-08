@@ -1,4 +1,4 @@
-# DependencyInjectable
+# Dependency Injectable
 
 This library offers a lightweight and powerful solution for integrating dependency injection into SwiftUI applications.
 Leveraging the latest native APIs, it facilitates a modular architecture by allowing dependencies to be injected directly into SwiftUI views and view models.
@@ -8,8 +8,9 @@ This approach simplifies testing and development by decoupling your app's compon
 1. [Features](#features)
 2. [Requirements](#requirements)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Author](#author)
+4. [Setup](#setup)
+5. [Usage](#usage)
+6. [Author](#author)
 
 ## Features
 
@@ -41,7 +42,7 @@ To integrate DependencyInjectable into your Xcode project using Xcode 15 or late
 2. Select `File` > `Swift Packages` > `Add Package Dependency...`
 3. Enter the package repository URL: 
 ```
-https://github.com/JamesSedlacek/DependencyInjectable.git`
+https://github.com/JamesSedlacek/DependencyInjectable.git
 ```
 4. Choose the version rule that makes sense for your project.
 5. Select `Add Package`.
@@ -57,12 +58,12 @@ import PackageDescription
 let package = Package(
     name: "DependencyInjectable",
     dependencies: [
-        .package(url: "https://github.com/YourUsername/DependencyInjectable.git", branch: "main")
+        .package(url: "https://github.com/JamesSedlacek/DependencyInjectable.git", branch: "main")
     ],
     targets: [
         .target(
-            name: "YourProjectName",
-            dependencies: ["YourPackageName"])
+            name: "YourTargetName",
+            dependencies: ["DependencyInjectable"])
     ]
 )
 ```
