@@ -8,8 +8,7 @@
 import DependencyInjectable
 import SwiftUI
 
-@Observable
-final class MockViewModel {
+final class MockViewModel: ObservableObject {
     var service: MockServiceable?
 
     var someProperty: String {

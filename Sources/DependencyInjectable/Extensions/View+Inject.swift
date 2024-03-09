@@ -6,13 +6,11 @@
 
 import SwiftUI
 
-/// An extension for `View` to enable dependency injection of observables.
+/// Extension for `View` to enable easy dependency injection.
 ///
-/// This extension provides a method to inject dependencies into SwiftUI views.
-/// The dependencies must conform to both `DependencyInjectable` and `AnyObservable`,
-/// allowing the injection of observable objects that can participate in SwiftUI's
-/// data flow system. This method enhances view composition by enabling cleaner
-/// and more modular dependency management.
+/// Provides methods for injecting dependencies into SwiftUI views. These dependencies
+/// are expected to conform to `DependencyInjectable` and either `AnyObservable` or
+/// `AnyObservableObject`, facilitating their integration into the SwiftUI's data flow.
 ///
 /// Usage:
 /// ```
@@ -25,17 +23,17 @@ import SwiftUI
 ///     }
 /// }
 /// ```
-/// In this example, `viewModel` is injected into `ContentView`, allowing `ContentView`
-/// to observe changes to `viewModel` and re-render as necessary.
+/// The `inject` method simplifies the injection process, promoting a clean and modular
+/// architecture by allowing views to be easily composed with their dependencies.
 extension View {
-    /// Injects a dependency into the view.
-    ///
-    /// - Parameter object: The dependency to inject, which conforms to both
-    ///   `DependencyInjectable` and `AnyObservable`. This allows the injected object
-    ///   to be observed for changes, integrating with SwiftUI's reactive update mechanism.
-    /// - Returns: A view that has the dependency injected, enabling it to participate
-    ///   in the data flow of a SwiftUI application.
+    /// Injects an `AnyObservable` conforming object into the view.
+    @available(macOS 14.0, iOS 17.0, watchOS 10.0, tvOS 17.0, *)
     public func inject<T: DependencyInjectable & AnyObservable>(_ object: T) -> some View {
-        modifier(DependencyInjectingModifier(object: object))
+        modifier(ObservableInjectingModifier(object: object))
+    }
+
+    /// Injects an `AnyObservableObject` conforming object into the view.
+    public func inject<T: DependencyInjectable & AnyObservableObject>(_ object: T) -> some View {
+        modifier(ObservableObjectInjectingModifier(object: object))
     }
 }
