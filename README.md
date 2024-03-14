@@ -167,7 +167,8 @@ struct ExampleApp: App {
 ### Injecting dependencies into a ViewModel
 
 Create a view model that injects your dependencies using the `DependencyInjectable` protocol: <br>
-Note - `onInject(dependencies:)` gets called automatically by the `.inject(:)` view modifier.
+> [!NOTE]
+> `onInject(dependencies:)` gets called automatically by the `.inject(:)` view modifier.
 
 ```swift
 @Observable
