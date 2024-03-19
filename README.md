@@ -173,7 +173,7 @@ Create a view model that injects your dependencies using the `DependencyInjectab
 ```swift
 @Observable
 final class ContentViewModel: DependencyInjectable {
-    var service: ExampleServiceable?
+    var service: (any ExampleServiceable)?
 
     var someProperty: String {
         service?.someProperty ?? "default value"
